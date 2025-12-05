@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 
-const mongoURI = 'mongodb+srv://snacksfactory:snacksfactory123@ac-qvldzpm-shard-00-00.dqq6rzc.mongodb.net/snacks-factory?retryWrites=true&w=majority';
+const mongoURI = process.env.MONGO_URI;
+
 
 const customerOrderSchema = new mongoose.Schema({
   orderNumber: String,
